@@ -53,6 +53,23 @@ window.PORTFOLIO = {
   ],
   projects: [
     {
+      title: "Radar Signal Processing Simulator",
+      subtitle: "Pulse-Doppler radar chain in C++, MATLAB & JS",
+      category: "DSP",
+      glyph: "∿",
+      colors: ["#0e7490", "#1d4ed8"],
+      metric: { value: "15 m", label: "range resolution · 41 dB gain" },
+      points: [
+        "LFM chirp waveform, FFT-based matched filter (pulse compression) and Doppler FFT.",
+        "Swerling 0–IV targets, radar range equation, 2-D CA-CFAR detection.",
+        "Radix-2 FFT from scratch; 20 unit tests against theory, run in CI.",
+        "Interactive in-browser demo plus a MATLAB reference script.",
+      ],
+      tags: ["C++17", "MATLAB", "FFT", "CFAR", "Radar"],
+      github: "https://github.com/S-Harshni/Radar-Signal-Processing-Simulator",
+      live: "https://s-harshni.github.io/Radar-Signal-Processing-Simulator/",
+    },
+    {
       title: "MERN Amazona",
       subtitle: "Full-stack e-commerce platform",
       category: "Full-Stack",

@@ -67,6 +67,7 @@ window.PORTFOLIO = {
       ],
       tags: ["Next.js", "React", "Node.js", "Tailwind", "Prisma", "SQL"],
       github: "https://github.com/S-Harshni/Amazon-Clone-MernStack",
+      live: "https://s-harshni.github.io/Amazon-Clone-MernStack/",
     },
     {
       title: "Smart Meeting Assistant Agent",
@@ -98,6 +99,7 @@ window.PORTFOLIO = {
       ],
       tags: ["Python", "TensorFlow", "ResNet", "k-NN"],
       github: "https://github.com/S-Harshni/AI-Powered-Fashion-Recommendation-System",
+      live: "https://s-harshni.github.io/AI-Powered-Fashion-Recommendation-System/",
     },
     {
       title: "Myntra Returns-Reduction Analysis",
@@ -113,7 +115,7 @@ window.PORTFOLIO = {
       ],
       tags: ["Power BI", "Excel", "KPIs"],
       github: "https://github.com/S-Harshni/myntra-returns-reduction-analysis",
-      live: "https://www.novypro.com/project/myntra-sales-dashboard-1",
+      live: "https://s-harshni.github.io/myntra-returns-reduction-analysis/",
     },
   ],
   skills: {

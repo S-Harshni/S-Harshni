@@ -314,3 +314,18 @@ details.more .points li { font-size: 13.5px; }
 [data-skin="grid"] .portrait img { transform: scale(1.07); object-position: center; }
 [data-skin="grid"] .f1 { top: 22px; left: -18px; }
 [data-skin="grid"] .f2 { top: 46%; right: -18px; }
+
+
+/* Performance: the background is a static layer at the top of the page, nothing is fixed, blurred or masked. */
+.backdrop { position: absolute; height: 1400px; contain: strict; }
+#field { display: none; }
+.nav.scrolled { background: var(--bg); backdrop-filter: none; }
+.progress { width: 100%; transform: scaleX(0); transform-origin: left; will-change: transform; }
+.marquee { mask-image: none; -webkit-mask-image: none; }
+.track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; gap: 10px 28px; padding: 0 20px; }
+.track span::before { margin-right: 28px; }
+.float, .pulse { animation: none; }
+.spot::after { display: none; }
+.project, .cover img, .browser, .chip, .btn { transition: none; }
+.project:hover, .feature:hover .browser, .project:hover .cover img { transform: none; }
+.reveal { transition: opacity .4s ease; transform: none; }

@@ -71,7 +71,7 @@ function countUp(el) {
 }
 
 const allSkills = Object.values(D.skills).flat();
-$("#marquee").innerHTML = [...allSkills, ...allSkills].map((s) => `<span>${esc(s)}</span>`).join("");
+$("#marquee").innerHTML = allSkills.slice(0, 18).map((s) => `<span>${esc(s)}</span>`).join("");
 
 // ---------- work ----------
 const featured = D.projects.filter((p) => p.featured), rest = D.projects.filter((p) => !p.featured);
@@ -154,9 +154,10 @@ const navLinks = [...document.querySelectorAll("#nav-links a")];
 navLinks.forEach((a) => a.addEventListener("click", () => $("#nav-links").classList.remove("open")));
 const onScroll = () => {
   $("#nav").classList.toggle("scrolled", scrollY > 10);
-  $("#progress").style.width = (scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)) * 100 + "%";
+  $("#progress").style.transform = `scaleX(${scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)})`;
 };
-addEventListener("scroll", onScroll, { passive: true }); onScroll();
+let ticking = false;
+addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { onScroll(); ticking = false; }); } }, { passive: true }); onScroll();
 const active = new IntersectionObserver((es) => es.forEach((en) => {
   if (en.isIntersecting) navLinks.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id));
 }), { rootMargin: "-45% 0px -50% 0px" });
@@ -168,12 +169,6 @@ const io = new IntersectionObserver((es) => es.forEach((en) => {
   io.unobserve(en.target);
 }), { threshold: 0.1 });
 document.querySelectorAll(".reveal, .stats").forEach((el) => io.observe(el));
-document.querySelectorAll(".spot").forEach((el) => el.addEventListener("pointermove", (e) => {
-  const r = el.getBoundingClientRect();
-  el.style.setProperty("--mx", e.clientX - r.left + "px");
-  el.style.setProperty("--my", e.clientY - r.top + "px");
-}));
-
 // ---------- command palette ----------
 const commands = [
   ...navLinks.map((a) => ({ label: a.textContent, hint: "Section", run: () => { location.hash = a.getAttribute("href"); } })),
@@ -210,47 +205,3 @@ addEventListener("keydown", (e) => {
 });
 if (!/Mac|iPhone|iPad/.test(navigator.platform)) document.querySelector("#palette-open kbd").textContent = "Ctrl K";
 
-// ---------- hero background: a field of points that links up near the pointer ----------
-(() => {
-  const canvas = $("#field"), ctx = canvas.getContext("2d");
-  if (reduce || !ctx) return;
-  const grid = document.documentElement.dataset.skin === "grid";
-  let w, h, dots, mouse = { x: -999, y: -999 }, visible = true;
-  const colour = () => getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
-  function size() {
-    const r = 1;
-    w = canvas.width = innerWidth * r; h = canvas.height = innerHeight * r;
-    const n = Math.min(grid ? 42 : 34, Math.round(innerWidth * innerHeight / (grid ? 30000 : 40000)));
-    dots = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .25 * r, vy: (Math.random() - .5) * .25 * r, s: (Math.random() * 1.4 + .6) * r }));
-  }
-  let last = 0;
-  function frame(now = 0) {
-    if (visible && scrollY < innerHeight * 1.2 && now - last > 33) {       // 30 fps, and only while the hero is on screen
-      last = now;
-      ctx.clearRect(0, 0, w, h);
-      const c = colour(), r = 1, reach = (grid ? 150 : 120) * r;
-      ctx.fillStyle = c; ctx.strokeStyle = c;
-      for (const d of dots) {
-        d.x += d.vx; d.y += d.vy;
-        if (d.x < 0 || d.x > w) d.vx *= -1;
-        if (d.y < 0 || d.y > h) d.vy *= -1;
-        ctx.globalAlpha = grid ? .5 : .65;
-        ctx.beginPath(); ctx.arc(d.x, d.y, d.s, 0, 6.3); ctx.fill();
-      }
-      for (let i = 0; i < dots.length; i++) {
-        const a = dots[i], md = Math.hypot(a.x - mouse.x * r, a.y - mouse.y * r);
-        if (md < reach * 1.6) { ctx.globalAlpha = (1 - md / (reach * 1.6)) * .5; ctx.lineWidth = r; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x * r, mouse.y * r); ctx.stroke(); }
-        if (!grid) continue;
-        for (let j = i + 1; j < dots.length; j++) {
-          const b = dots[j], dist = Math.hypot(a.x - b.x, a.y - b.y);
-          if (dist < reach) { ctx.globalAlpha = (1 - dist / reach) * .22; ctx.lineWidth = r * .8; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-        }
-      }
-    }
-    requestAnimationFrame(frame);
-  }
-  addEventListener("resize", size);
-  addEventListener("pointermove", (e) => { mouse = { x: e.clientX, y: e.clientY }; }, { passive: true });
-  document.addEventListener("visibilitychange", () => { visible = !document.hidden; });
-  size(); frame();
-})();

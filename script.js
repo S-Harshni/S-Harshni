@@ -218,15 +218,17 @@ if (!/Mac|iPhone|iPad/.test(navigator.platform)) document.querySelector("#palett
   let w, h, dots, mouse = { x: -999, y: -999 }, visible = true;
   const colour = () => getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
   function size() {
-    const r = devicePixelRatio || 1;
+    const r = 1;
     w = canvas.width = innerWidth * r; h = canvas.height = innerHeight * r;
-    const n = Math.min(grid ? 70 : 60, Math.round(innerWidth * innerHeight / (grid ? 16000 : 26000)));
+    const n = Math.min(grid ? 42 : 34, Math.round(innerWidth * innerHeight / (grid ? 30000 : 40000)));
     dots = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .25 * r, vy: (Math.random() - .5) * .25 * r, s: (Math.random() * 1.4 + .6) * r }));
   }
-  function frame() {
-    if (visible) {
+  let last = 0;
+  function frame(now = 0) {
+    if (visible && scrollY < innerHeight * 1.2 && now - last > 33) {       // 30 fps, and only while the hero is on screen
+      last = now;
       ctx.clearRect(0, 0, w, h);
-      const c = colour(), r = devicePixelRatio || 1, reach = (grid ? 150 : 120) * r;
+      const c = colour(), r = 1, reach = (grid ? 150 : 120) * r;
       ctx.fillStyle = c; ctx.strokeStyle = c;
       for (const d of dots) {
         d.x += d.vx; d.y += d.vy;

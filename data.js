@@ -53,6 +53,23 @@ window.PORTFOLIO = {
   ],
   projects: [
     {
+      title: "Retail Intelligence Platform",
+      subtitle: "Forecasting, customer model and recommendations",
+      category: "Data",
+      glyph: "£",
+      colors: ["#2a78d6", "#1baf7a"],
+      metric: { value: "1.07M", label: "real retail transactions · 2-member team" },
+      points: [
+        "Analytics and models on two years of a UK online retailer's orders, over a SQL warehouse.",
+        "Repeat-purchase model: ROC AUC 0.80 on a later 90-day window; 92% of the top tenth ordered.",
+        "Weekly demand forecast for 791 products: 10% lower error than the best simple rule over 3 weeks.",
+        "Bought-together recommender: 29.8% hit rate in the top 10, 8.6× the best-seller baseline.",
+      ],
+      tags: ["Python", "SQL", "DuckDB", "scikit-learn", "FastAPI"],
+      github: "https://github.com/S-Harshni/Retail-Intelligence-Platform",
+      live: "https://s-harshni.github.io/Retail-Intelligence-Platform/",
+    },
+    {
       title: "Turbofan Predictive Maintenance",
       subtitle: "Remaining-life prediction and maintenance queue",
       category: "AI / ML",

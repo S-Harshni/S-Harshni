@@ -11,7 +11,7 @@
 I build scalable server-side systems, fast REST APIs and clean React/Next.js front ends. I care most about performance, reliability and ownership.
 
 - 🎓 **B.Tech, Computer Science & Engineering (AI & ML)** at SRM Institute of Science and Technology, Chennai. CGPA **8.65**, graduating 2027.
-- 💼 **SDE Intern at InAmigos Foundation** (Jan–May 2026): designed REST APIs (Python, Flask) serving **500+ daily users at 99.9% uptime**, tuned SQL for **sub-200 ms** hot endpoints, and owned an AI-powered inventory system end to end.
+- 💼 **Data Engineering Intern at InAmigos Foundation** (Jan–May 2026): designed REST APIs (Python, Flask) serving **500+ daily users at 99.9% uptime**, tuned SQL for **sub-200 ms** hot endpoints, and owned an AI-powered inventory system end to end.
 - 📜 **10+ certifications**, including AWS Certified Developer – Associate, Oracle MySQL 8.0 Developer, MongoDB Associate Developer and Meta Back-End Developer.
 - 🌱 Open to **SDE roles**. I like fast-paced, startup-style teams.
 
@@ -62,6 +62,10 @@ I build scalable server-side systems, fast REST APIs and clean React/Next.js fro
 
 | Project | What it is | Stack | Links |
 | --- | --- | --- | --- |
+| **[RAG Document QA](https://github.com/S-Harshni/RAG-Document-QA)** | Retrieval-augmented QA: chunking, FAISS vector store, hybrid retrieval measured on 10,570 questions; open-source LLMs with cited JSON answers, prompt-injection tests and an agent | Python · FAISS · Llama · Qwen · Gemma | [▶ Live demo](https://s-harshni.github.io/RAG-Document-QA/) |
+| **[Mini GPT From Scratch](https://github.com/S-Harshni/Mini-GPT-From-Scratch)** | A 940,800-parameter transformer with hand-written attention, a BPE tokenizer and top-k / top-p sampling | Python · PyTorch | [▶ Live demo](https://s-harshni.github.io/Mini-GPT-From-Scratch/) |
+| **[Retail Intelligence Platform](https://github.com/S-Harshni/Retail-Intelligence-Platform)** | SQL warehouse and PySpark / Delta Lake lakehouse on 1M real retail transactions, with a repeat-purchase model, demand forecast and recommender | Python · SQL · PySpark · Delta Lake · FastAPI | [▶ Live demo](https://s-harshni.github.io/Retail-Intelligence-Platform/) |
+| **[Turbofan Predictive Maintenance](https://github.com/S-Harshni/Turbofan-Predictive-Maintenance)** | Remaining-useful-life prediction on NASA C-MAPSS with a ranked maintenance queue | Python · scikit-learn | [▶ Live demo](https://s-harshni.github.io/Turbofan-Predictive-Maintenance/) |
 | **[Radar Signal Processing Simulator](https://github.com/S-Harshni/Radar-Signal-Processing-Simulator)** | Pulse-Doppler radar chain: LFM pulse compression, range-Doppler FFT, Swerling targets, 2-D CA-CFAR. Unit tests run in CI | C++17 · MATLAB · JS | [▶ Live demo](https://s-harshni.github.io/Radar-Signal-Processing-Simulator/) |
 | **[StockWatch](https://github.com/S-Harshni/StockWatch)** | Smart watchlist that ranks stocks by what changed since you last looked (attention score, peers, news). Built for the CODE 2026 hackathon | React · FastAPI · Finnhub | [▶ Live demo](https://stock-watch-one-pi.vercel.app) |
 | **[Amazona](https://github.com/S-Harshni/Amazon-Clone-MernStack)** | Full-stack Amazon-style store: search, cart, checkout, admin dashboard with sales analytics | MongoDB · Express · React · Node | [▶ Live demo](https://s-harshni.github.io/Amazon-Clone-MernStack/) |
@@ -85,7 +89,7 @@ I build scalable server-side systems, fast REST APIs and clean React/Next.js fro
 ## 📜 Certifications
 
 <details>
-<summary><b>AWS · Oracle · MongoDB · Meta · Microsoft · Google</b></summary>
+<summary><b>AWS · Oracle · Databricks · MongoDB · Meta · Microsoft · Google</b></summary>
 
 - AWS Certified Developer – Associate
 - AWS Certified Cloud Practitioner (2025)
@@ -96,6 +100,8 @@ I build scalable server-side systems, fast REST APIs and clean React/Next.js fro
 - Microsoft Azure Fundamentals AZ-900 · Azure AI Fundamentals AI-900
 - Microsoft Power BI Data Analyst PL-300 · Excel
 - Google Data Analytics
+- Databricks Fundamentals · Databricks Generative AI Fundamentals
+- Codefest Technical Hackathon, 2nd place (SRM IST)
 
 </details>
 

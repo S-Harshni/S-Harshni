@@ -27,18 +27,18 @@ window.PORTFOLIO = {
   ],
   about: [
     "I'm a <strong>Full-stack Software Development Engineer</strong> pursuing a B.Tech in Computer Science (AI &amp; ML) at SRM Institute of Science and Technology, graduating in 2027.",
-    "As an SDE intern at <strong>InAmigos Foundation</strong>, I designed server-side architecture and RESTful APIs serving 500+ daily active users at 99.9% uptime, and owned an AI-powered inventory system end to end.",
+    "As a data engineering intern at <strong>InAmigos Foundation</strong>, I designed server-side architecture and RESTful APIs serving 500+ daily active users at 99.9% uptime, and owned an AI-powered inventory system end to end.",
     "I work across <strong>Node.js, TypeScript, React, Next.js, Tailwind CSS and SQL</strong>, with hands-on AWS, Docker and Git. I take ownership, learn fast and enjoy fast-paced, startup-style teams.",
   ],
   facts: [
     { icon: "pin", label: "Location", value: "Chennai, India" },
     { icon: "cap", label: "Education", value: "B.Tech CSE (AI & ML) · CGPA 8.65" },
-    { icon: "brief", label: "Latest role", value: "SDE Intern · InAmigos Foundation" },
+    { icon: "brief", label: "Latest role", value: "Data Engineering Intern · InAmigos Foundation" },
     { icon: "star", label: "Focus", value: "APIs · Databases · Web performance" },
   ],
   experience: [
     {
-      title: "Software Development Engineer Intern",
+      title: "Data Engineering Intern",
       company: "InAmigos Foundation",
       date: "Jan 2026 – May 2026",
       place: "Chennai",
@@ -54,20 +54,37 @@ window.PORTFOLIO = {
   projects: [
     {
       title: "RAG Document QA",
-      subtitle: "Retrieval-augmented question answering",
+      subtitle: "Retrieval-augmented generation with evaluation and safety tests",
       category: "AI / ML",
       glyph: "?",
       colors: ["#4a3aa7", "#2a78d6"],
-      metric: { value: "93.4%", label: "correct passage in the top 5 · 10,570 questions" },
+      metric: { value: "91.0%", label: "correct chunk in the top 5 · 10,570 questions" },
       points: [
-        "BM25 written from scratch, dense embeddings and a hybrid using reciprocal rank fusion.",
-        "All three retrievers measured on 10,570 SQuAD questions over 2,067 passages.",
-        "LLM answers only from retrieved passages and cites them, or declines.",
-        "Runs without an API key in extractive mode; 8 tests in CI and a live demo.",
+        "Chunking, embeddings, a FAISS vector store, BM25 from scratch and hybrid retrieval.",
+        "Chunk-size trade-off and exact vs HNSW search measured on 10,570 questions.",
+        "Llama, Qwen and Gemma run locally; few-shot and chain-of-thought prompts; cited JSON answers.",
+        "Prompt-injection tests, hallucination checks, log redaction and a tool-using agent; 18 tests in CI.",
       ],
-      tags: ["Python", "RAG", "LLM APIs", "Embeddings", "BM25"],
+      tags: ["Python", "RAG", "FAISS", "LLMs", "Agents"],
       github: "https://github.com/S-Harshni/RAG-Document-QA",
       live: "https://s-harshni.github.io/RAG-Document-QA/",
+    },
+    {
+      title: "Mini GPT From Scratch",
+      subtitle: "Transformer language model and BPE tokenizer",
+      category: "AI / ML",
+      glyph: "∑",
+      colors: ["#0d366b", "#eb6834"],
+      metric: { value: "940,800", label: "parameters · written and trained from scratch" },
+      points: [
+        "Decoder-only transformer with hand-written causal multi-head self-attention.",
+        "Byte-pair tokenizer from scratch (1,024 tokens), also running in the browser.",
+        "Training pipeline: AdamW, warm-up, cosine decay, gradient clipping.",
+        "Temperature, top-k and top-p sampling; attention visualised; 9 tests in CI.",
+      ],
+      tags: ["Python", "PyTorch", "Transformers", "BPE"],
+      github: "https://github.com/S-Harshni/Mini-GPT-From-Scratch",
+      live: "https://s-harshni.github.io/Mini-GPT-From-Scratch/",
     },
     {
       title: "Retail Intelligence Platform",
@@ -152,6 +169,7 @@ window.PORTFOLIO = {
       ],
       tags: ["Python", "Agno", "LLMs", "Linear API", "Slack API", "Streamlit"],
       github: "https://github.com/S-Harshni/Smart-Meeting-Assistant-Agent",
+      live: "https://s-harshni.github.io/Smart-Meeting-Assistant-Agent/",
     },
     {
       title: "AI Fashion Recommender",
@@ -187,6 +205,8 @@ window.PORTFOLIO = {
     },
   ],
   skills: {
+    "Generative AI": ["RAG", "Embeddings", "FAISS", "Agents (Agno)", "Prompt Engineering", "LLM Evaluation", "Llama · Qwen · Gemma"],
+    "Data & ML": ["PyTorch", "scikit-learn", "PySpark", "Delta Lake", "pandas", "DuckDB"],
     Languages: ["JavaScript", "TypeScript", "Python", "Java", "SQL", "C++", "HTML/CSS"],
     Frontend: ["React.js", "Next.js", "Tailwind CSS", "Streamlit"],
     Backend: ["Node.js", "Next.js API Routes", "Flask", "Spring Boot", "REST API Design", "JWT Auth", "Prisma ORM"],
@@ -205,6 +225,8 @@ window.PORTFOLIO = {
     },
   ],
   certs: [
+    "Codefest Technical Hackathon — 2nd Place, SRM IST",
+    "Databricks Fundamentals · Databricks Generative AI Fundamentals",
     "AWS Certified Developer – Associate",
     "AWS Certified Cloud Practitioner (2025)",
     "Oracle Certified Professional: MySQL 8.0 Database Developer",

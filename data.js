@@ -58,7 +58,7 @@ window.PORTFOLIO = {
       category: "Data",
       glyph: "£",
       colors: ["#2a78d6", "#1baf7a"],
-      metric: { value: "1.07M", label: "real retail transactions · 2-member team" },
+      metric: { value: "1.07M", label: "real retail transactions" },
       points: [
         "Analytics and models on two years of a UK online retailer's orders, over a SQL warehouse.",
         "Repeat-purchase model: ROC AUC 0.80 on a later 90-day window; 92% of the top tenth ordered.",

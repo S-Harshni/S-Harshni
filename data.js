@@ -53,6 +53,23 @@ window.PORTFOLIO = {
   ],
   projects: [
     {
+      title: "RAG Document QA",
+      subtitle: "Retrieval-augmented question answering",
+      category: "AI / ML",
+      glyph: "?",
+      colors: ["#4a3aa7", "#2a78d6"],
+      metric: { value: "93.4%", label: "correct passage in the top 5 · 10,570 questions" },
+      points: [
+        "BM25 written from scratch, dense embeddings and a hybrid using reciprocal rank fusion.",
+        "All three retrievers measured on 10,570 SQuAD questions over 2,067 passages.",
+        "LLM answers only from retrieved passages and cites them, or declines.",
+        "Runs without an API key in extractive mode; 8 tests in CI and a live demo.",
+      ],
+      tags: ["Python", "RAG", "LLM APIs", "Embeddings", "BM25"],
+      github: "https://github.com/S-Harshni/RAG-Document-QA",
+      live: "https://s-harshni.github.io/RAG-Document-QA/",
+    },
+    {
       title: "Retail Intelligence Platform",
       subtitle: "Forecasting, customer model and recommendations",
       category: "Data",
@@ -65,7 +82,7 @@ window.PORTFOLIO = {
         "Weekly demand forecast for 791 products: 10% lower error than the best simple rule over 3 weeks.",
         "Bought-together recommender: 29.8% hit rate in the top 10, 8.6× the best-seller baseline.",
       ],
-      tags: ["Python", "SQL", "DuckDB", "scikit-learn", "FastAPI"],
+      tags: ["Python", "SQL", "PySpark", "Delta Lake", "scikit-learn", "FastAPI"],
       github: "https://github.com/S-Harshni/Retail-Intelligence-Platform",
       live: "https://s-harshni.github.io/Retail-Intelligence-Platform/",
     },

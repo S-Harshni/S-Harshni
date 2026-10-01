@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm S Harshni 👋</h1>
-<h3 align="center">Full-Stack Software Development Engineer · B.Tech CSE (AI &amp; ML) at SRM IST, 2027</h3>
+<h3 align="center">AI &amp; Software Engineer · B.Tech CSE (AI &amp; ML) at SRM IST, 2027</h3>
 
 <p align="center">
   <a href="https://s-harshni.github.io/S-Harshni/"><img src="https://img.shields.io/badge/Portfolio-s--harshni.github.io-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"></a>
@@ -8,12 +8,12 @@
   <a href="https://s-harshni.github.io/S-Harshni/resume.pdf"><img src="https://img.shields.io/badge/Resume-PDF-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Resume"></a>
 </p>
 
-I build scalable server-side systems, fast REST APIs and clean React/Next.js front ends. I care most about performance, reliability and ownership.
+I build AI systems and measure them: retrieval pipelines, fine-tuned and prompted language models, and agents, on top of solid back-end and data engineering. I care most about evidence, reliability and ownership.
 
 - 🎓 **B.Tech, Computer Science & Engineering (AI & ML)** at SRM Institute of Science and Technology, Chennai. CGPA **8.65**, graduating 2027.
 - 💼 **Data Engineering Intern at InAmigos Foundation** (Jan–May 2026): designed REST APIs (Python, Flask) serving **500+ daily users at 99.9% uptime**, tuned SQL for **sub-200 ms** hot endpoints, and owned an AI-powered inventory system end to end.
 - 📜 **10+ certifications**, including AWS Certified Developer – Associate, Oracle MySQL 8.0 Developer, MongoDB Associate Developer and Meta Back-End Developer.
-- 🌱 Open to **SDE roles**. I like fast-paced, startup-style teams.
+- 🌱 Open to **AI engineering and SDE roles**. I like fast-paced, startup-style teams.
 
 ## 🛠️ Tech stack
 
@@ -62,16 +62,17 @@ I build scalable server-side systems, fast REST APIs and clean React/Next.js fro
 
 | Project | What it is | Stack | Links |
 | --- | --- | --- | --- |
-| **[RAG Document QA](https://github.com/S-Harshni/RAG-Document-QA)** | Retrieval-augmented QA: chunking, FAISS vector store, hybrid retrieval measured on 10,570 questions; open-source LLMs with cited JSON answers, prompt-injection tests and an agent | Python · FAISS · Llama · Qwen · Gemma | [▶ Live demo](https://s-harshni.github.io/RAG-Document-QA/) |
-| **[Mini GPT From Scratch](https://github.com/S-Harshni/Mini-GPT-From-Scratch)** | A 940,800-parameter transformer with hand-written attention, a BPE tokenizer and top-k / top-p sampling | Python · PyTorch | [▶ Live demo](https://s-harshni.github.io/Mini-GPT-From-Scratch/) |
-| **[Retail Intelligence Platform](https://github.com/S-Harshni/Retail-Intelligence-Platform)** | SQL warehouse and PySpark / Delta Lake lakehouse on 1M real retail transactions, with a repeat-purchase model, demand forecast and recommender | Python · SQL · PySpark · Delta Lake · FastAPI | [▶ Live demo](https://s-harshni.github.io/Retail-Intelligence-Platform/) |
+| **[RAG Document QA](https://github.com/S-Harshni/RAG-Document-QA)** | Retrieval-augmented QA measured end to end: chunking, a FAISS vector store and hybrid retrieval on 10,570 questions (right chunk in the top 5 for 91%); open-source LLMs with cited JSON answers, prompt-injection tests and a tool-using agent | Python · FAISS · Llama · Qwen · Gemma | [▶ Live demo](https://s-harshni.github.io/RAG-Document-QA/) |
+| **[Drug Safety LLM Fine-Tuning](https://github.com/S-Harshni/Drug-Safety-LLM-FineTuning)** | LoRA fine-tuning of a 0.5B open-source LLM to find adverse drug events in medical case reports, compared with prompting a larger model and a classical baseline | Python · PyTorch · PEFT (LoRA) · Transformers | [▶ Live demo](https://s-harshni.github.io/Drug-Safety-LLM-FineTuning/) |
+| **[Mini GPT From Scratch](https://github.com/S-Harshni/Mini-GPT-From-Scratch)** | A 940,800-parameter transformer with hand-written attention, a BPE tokenizer, top-k / top-p sampling and five ablations | Python · PyTorch | [▶ Live demo](https://s-harshni.github.io/Mini-GPT-From-Scratch/) |
+| **[Retail Intelligence Platform](https://github.com/S-Harshni/Retail-Intelligence-Platform)** | SQL warehouse and PySpark / Delta Lake lakehouse on 1M real retail transactions, with a text-to-SQL assistant (73% execution accuracy with three small models voting), a repeat-purchase model, demand forecast and recommender | Python · SQL · LLMs · PySpark · FastAPI | [▶ Live demo](https://s-harshni.github.io/Retail-Intelligence-Platform/) |
 | **[Turbofan Predictive Maintenance](https://github.com/S-Harshni/Turbofan-Predictive-Maintenance)** | Remaining-useful-life prediction on NASA C-MAPSS with a ranked maintenance queue | Python · scikit-learn | [▶ Live demo](https://s-harshni.github.io/Turbofan-Predictive-Maintenance/) |
 | **[Radar Signal Processing Simulator](https://github.com/S-Harshni/Radar-Signal-Processing-Simulator)** | Pulse-Doppler radar chain: LFM pulse compression, range-Doppler FFT, Swerling targets, 2-D CA-CFAR. Unit tests run in CI | C++17 · MATLAB · JS | [▶ Live demo](https://s-harshni.github.io/Radar-Signal-Processing-Simulator/) |
 | **[StockWatch](https://github.com/S-Harshni/StockWatch)** | Smart watchlist that ranks stocks by what changed since you last looked (attention score, peers, news). Built for the CODE 2026 hackathon | React · FastAPI · Finnhub | [▶ Live demo](https://stock-watch-one-pi.vercel.app) |
 | **[Amazona](https://github.com/S-Harshni/Amazon-Clone-MernStack)** | Full-stack Amazon-style store: search, cart, checkout, admin dashboard with sales analytics | MongoDB · Express · React · Node | [▶ Live demo](https://s-harshni.github.io/Amazon-Clone-MernStack/) |
 | **[Spotify Clone](https://github.com/S-Harshni/Spotify-Clone)** | Music player with search, liked songs, uploads and a persistent player | Next.js · Supabase · Zustand | [▶ Live demo](https://s-harshni.github.io/Spotify-Clone/) |
 | **[Thirukkural](https://github.com/S-Harshni/Thirukkural)** | All 1330 couplets with classical commentaries and text-to-speech narration with word highlighting | Flask · TTS | [▶ Live](https://thirukkural-evaz.onrender.com) |
-| **[Smart Meeting Assistant](https://github.com/S-Harshni/Smart-Meeting-Assistant-Agent)** | Multi-agent workflow: meeting notes → summary → Linear tasks → Slack recap | Agno · Nebius LLM · Streamlit | [Code](https://github.com/S-Harshni/Smart-Meeting-Assistant-Agent) |
+| **[Meeting Assistant Agent](https://github.com/S-Harshni/Smart-Meeting-Assistant-Agent)** | Meeting notes to validated action items, Linear tasks and a Slack recap. A code tool for deadlines lifts date accuracy from 34–48% to 83–97% on 18 labelled meetings | Python · Agno · Llama · Gemma · Streamlit | [Project page](https://s-harshni.github.io/Smart-Meeting-Assistant-Agent/) |
 | **[Job Search Agent](https://github.com/S-Harshni/Job-Search-Agent)** | Analyses a LinkedIn profile and finds matching jobs | Bright Data MCP · Nebius · Streamlit | [Code](https://github.com/S-Harshni/Job-Search-Agent) |
 | **[AI Fashion Recommender](https://github.com/S-Harshni/AI-Powered-Fashion-Recommendation-System)** | ResNet on DeepFashion; its embeddings power "more like this" nearest-neighbour search | TensorFlow · ResNet · k-NN | [Project page](https://s-harshni.github.io/AI-Powered-Fashion-Recommendation-System/) |
 | **[Real-time Emotion Recognition](https://github.com/S-Harshni/Real-time-Emotion-Recognition)** | Webcam face detection + CNN trained on FER-2013 (7 emotions) | Keras · OpenCV | [Code](https://github.com/S-Harshni/Real-time-Emotion-Recognition) |

@@ -121,6 +121,37 @@ window.PORTFOLIO = {
       "live": "https://s-harshni.github.io/RAG-Document-QA/"
     },
     {
+      "title": "Drug Safety LLM Fine-Tuning",
+      "subtitle": "When is fine-tuning a small model better than prompting a large one?",
+      "category": "Generative AI",
+      "glyph": "Rx",
+      "colors": [
+        "#7c2d12",
+        "#0f766e"
+      ],
+      "featured": true,
+      "image": "assets/projects/drug.jpg",
+      "metric": {
+        "value": "81.7%",
+        "label": "F1 after LoRA fine-tuning, against 71.2% for prompting a 6× larger model"
+      },
+      "points": [
+        "A 0.5B-parameter open-source LLM fine-tuned with LoRA to find adverse drug events in 20,895 sentences from medical case reports.",
+        "Only 0.22% of the weights are trained, on a laptop; the result beats prompting and a TF-IDF baseline (72.2%).",
+        "Data-size study: 60.9% F1 with 250 training sentences, 72.1% with 1,000, 81.7% with 4,000.",
+        "Also extracts (drug, effect) pairs by generation: 72.4% pair F1 against 64.5% prompted; 10 tests in CI."
+      ],
+      "tags": [
+        "Python",
+        "PyTorch",
+        "LoRA / PEFT",
+        "Transformers",
+        "Evaluation"
+      ],
+      "github": "https://github.com/S-Harshni/Drug-Safety-LLM-FineTuning",
+      "live": "https://s-harshni.github.io/Drug-Safety-LLM-FineTuning/"
+    },
+    {
       "title": "Retail Intelligence Platform",
       "subtitle": "A SQL warehouse you can question in plain English",
       "category": "Data + GenAI",
@@ -367,6 +398,7 @@ window.PORTFOLIO = {
       "Embeddings",
       "FAISS",
       "Hybrid retrieval",
+      "Fine-tuning (LoRA / PEFT)",
       "Text-to-SQL",
       "Agents (Agno)",
       "Prompt engineering",

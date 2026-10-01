@@ -53,6 +53,23 @@ window.PORTFOLIO = {
   ],
   projects: [
     {
+      title: "Turbofan Predictive Maintenance",
+      subtitle: "Remaining-life prediction and maintenance queue",
+      category: "AI / ML",
+      glyph: "⚙",
+      colors: ["#0b5cad", "#0e7490"],
+      metric: { value: "11.3", label: "cycles test RMSE · 35% lower than raw sensors" },
+      points: [
+        "Predicts remaining useful life of jet engines on NASA's C-MAPSS benchmark (33,700+ operating cycles).",
+        "Leakage-free rolling and drift features; evaluated on 100 held-out engines.",
+        "Alerts catch 22 of 25 engines within 30 cycles of failure, with no false alerts.",
+        "Ranked maintenance queue with uncertainty ranges; 8 tests in CI and a live dashboard.",
+      ],
+      tags: ["Python", "scikit-learn", "pandas", "Time series", "Chart.js"],
+      github: "https://github.com/S-Harshni/Turbofan-Predictive-Maintenance",
+      live: "https://s-harshni.github.io/Turbofan-Predictive-Maintenance/",
+    },
+    {
       title: "Radar Signal Processing Simulator",
       subtitle: "Pulse-Doppler radar chain in C++, MATLAB & JS",
       category: "DSP",

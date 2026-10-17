@@ -137,15 +137,16 @@ window.PORTFOLIO = {
       },
       "points": [
         "A 0.5B-parameter open-source LLM fine-tuned with LoRA to find adverse drug events in 20,895 sentences from medical case reports.",
-        "Only 0.22% of the weights are trained, on a laptop; the result beats prompting and a TF-IDF baseline (72.2%).",
-        "Data-size study: 60.9% F1 with 250 training sentences, 72.1% with 1,000, 81.7% with 4,000.",
-        "Also extracts (drug, effect) pairs by generation: 72.4% pair F1 against 64.5% prompted; 10 tests in CI."
+        "Only 0.22% of the weights are trained, on a laptop; it beats prompting and a TF-IDF baseline (72.2%), and extracts (drug, effect) pairs at 72.4% F1.",
+        "Validated on 20.7M real FDA adverse event reports (FAERS): 54% of its extracted pairs are safety signals, like human annotators (56%), against 27% by chance.",
+        "Live 'Check a drug' tool: any drug and side effect against FAERS and the FDA label, in the browser, with the pipeline's own rules; 14 tests in CI."
       ],
       "tags": [
         "Python",
         "PyTorch",
         "LoRA / PEFT",
-        "Transformers",
+        "openFDA",
+        "Pharmacovigilance",
         "Evaluation"
       ],
       "github": "https://github.com/S-Harshni/Drug-Safety-LLM-FineTuning",
